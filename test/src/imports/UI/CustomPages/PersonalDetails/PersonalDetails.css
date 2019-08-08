@@ -1,0 +1,19 @@
+.personal-tabs-container{
+    border: .05rem solid #20b9ab;
+    border-radius: 0.5rem;
+}
+
+.personal-tabs-bg{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background: #20b9ab;
+}
+.personal-tabs{
+   font-size: 1rem;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #fff;
+   padding: 0.5rem 1rem;
+}
+.opacity-05{
+    opacity: 0.5;
+}

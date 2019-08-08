@@ -1,0 +1,59 @@
+.radio-button__container {
+  padding-top: 0rem;
+  padding-left: 1.75rem;
+  font-size: 1rem;
+  margin: 0;
+  color: #000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 2rem;
+  align-content: center;
+  cursor: pointer;
+}
+.radio-button__container .radio-button__checked {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.radio-button__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #fff;
+  border: 0.01rem solid gray;
+  border-radius: 50%;
+}
+.radio-button__container:hover .radio-button__checked ~ .radio-button__mark {
+  border: 0.01rem solid #000;
+}
+.radio-button__container .radio-button__checked:checked ~ .radio-button__mark {
+  border: 0.01rem solid #000;
+}
+.radio-button__mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.radio-button__container
+  .radio-button__checked:checked
+  ~ .radio-button__mark:after {
+  display: block;
+}
+.radio-button__container .radio-button__mark:after {
+  top: 0.25rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #000;
+}

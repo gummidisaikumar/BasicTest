@@ -1,0 +1,23 @@
+.custom-menu {
+  background: #f3f3f3;
+  min-height: 4rem;
+}
+.custom-menu-item--position {
+  width: 87%;
+  align-items: center;
+  margin: 0 auto;
+}
+.nav-item {
+  padding: 0rem 1rem;
+  color: #000;
+}
+.nav-item--list {
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.active.nav-item {
+  color: #25b1a4;
+}
+.navbar-collapse {
+  min-height: 3rem !important;
+}

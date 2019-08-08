@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.common-flex{
+  display: flex; 
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.margin-auto{
+  margin: auto;
+}
+.bg-white-smoke{
+  background: #f3f3f3;
+}
+.br-bottom{
+  border-bottom: 0.15rem solid #f3f3f3;
+}
+.error-msg{
+  font-size: 0.75rem;
+  color: red;
+}
+.form-control{
+  border: 0.15rem solid #ced4da !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  font-size: 1rem !important;
+}
+.has-error .form-control {
+  border-color: #a94442;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ced4da !important;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+@import './imports/UI/Stylesheet/_paddingAndMargin.css';
+@import './imports/UI/Stylesheet/_radio-button.css';
+@import './imports/UI/CustomComponent/Navigation/Navigation.css';
+@import './imports/UI/CustomPages/PersonalDetails/PersonalDetails.css';

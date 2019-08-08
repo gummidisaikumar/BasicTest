@@ -1,0 +1,16 @@
+.mb-0px {
+  margin-bottom: 0;
+}
+.common-plr {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.pb-32px{
+    padding-bottom: 2rem;
+}
+.pt-32px{
+    padding-top: 2rem;
+}
+.mt-48px{
+    margin-top: 3rem ;
+}
