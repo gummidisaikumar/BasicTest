@@ -118,20 +118,20 @@ class PersonalInfo extends Component {
     this.onGenderSelect = this.onGenderSelect.bind(this);
   }
   componentDidMount() {
-    if (this.props.firstName) {
+    if (this.state.firstName) {
       this.validator.touched("firstName");
     }
-    if (this.props.lastName) {
+    if (this.state.lastName) {
       this.validator.touched("lastName");
     }
 
-    if (this.props.emailAddress) {
+    if (this.state.emailAddress) {
       this.validator.touched("emailAddress");
     }
-    if (this.props.phoneNumber) {
+    if (this.state.phoneNumber) {
       this.validator.touched("phoneNumber");
     }
-    if (this.props.gender) {
+    if (this.state.gender) {
         this.validator.touched("gender");
       }
   }
@@ -200,7 +200,7 @@ class PersonalInfo extends Component {
                     className={isInputInError(validation.lastName.isInvalid)}
                   >
                     <Input
-                      placeholder="last Name"
+                      placeholder="lastName"
                       type="text"
                       name="lastName"
                       valid={false}
@@ -396,7 +396,7 @@ class PersonalInfo extends Component {
               <Col xs={6} sm={5} md={4} lg={3} xl={3}>
                 <FormGroup>
                   <Button onClick={this.handleSubmit} className="btn-block"
-                  disabled={!this.validator.canSubmit(this.state)}>
+                   disabled={!this.validator.canSubmit(this.state)}>
                     Submit
                   </Button>
                 </FormGroup>

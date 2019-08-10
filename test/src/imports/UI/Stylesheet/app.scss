@@ -1,0 +1,12 @@
+@import 'common';
+@import 'colors';
+@import 'fonts';
+@import 'typography';
+@import 'mixins';
+@import 'screen-sizes';
+@import '_margins_and_paddings';
+@import 'radio-button';
+@import 'colors';
+
+@import '../CustomComponent/Navigation/Navigation';
+@import '../CustomPages/PersonalDetails/PersonalDetails';

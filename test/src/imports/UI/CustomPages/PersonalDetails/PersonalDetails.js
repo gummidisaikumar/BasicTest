@@ -3,6 +3,7 @@ import { Row, Col } from "reactstrap";
 import PropTypes from "prop-types";
 import PersonalInfo from "../../CustomComponent/PersonalInfo/PersonalInfo";
 import Register from "../../CustomComponent/Register/Register";
+const localStorage = require("local-storage");
 
 class PersonalDetails extends Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class PersonalDetails extends Component {
       selectedIndex: 1,
       firstName: data.firstName,
       lastName: data.lastName,
-      emailAddress: data.emailAddress,
+      emailAddress: data.emailAddress
     });
   }
 
@@ -43,16 +44,31 @@ class PersonalDetails extends Component {
     }
   }
   handleSubmit(data) {
-    console.log(data);
-    const { history } = this.props;
-    history.push("/dashboard");
+    if(data){
+      let userInfo=[];
+      let local = localStorage.get("data")
+      if(local){
+          userInfo.push(data);
+          for(var i=0; i<local.length; i++){
+            userInfo.push(local[i]);
+          }
+       }
+        else{
+          userInfo.push(data);
+        }
+      
+      localStorage.set("data", userInfo);
+
+      const { history } = this.props;
+      history.push("/userlist");
+    }
   }
   renderSelectedComponent() {
     if (this.state.selectedIndex === 0) {
       return <Register onSave={this.handleNextClick} />;
     }
     if (this.state.selectedIndex === 1) {
-      return <PersonalInfo onSave={this.handleSubmit} data={this.state}/>;
+      return <PersonalInfo onSave={this.handleSubmit} data={this.state} />;
     }
     return null;
   }

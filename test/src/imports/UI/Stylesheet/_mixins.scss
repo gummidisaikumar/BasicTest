@@ -1,0 +1,64 @@
+// @mixin breakpoint($point) {
+//     @if $point == desktop-large {
+//       @media (min-width: 1200px) { @content; }
+//     } @else if $point == desktop {
+//       @media (min-width: 1024px) { @content; }
+//     } @else if $point == tablet {
+//       @media (min-width: 768px) { @content; }
+//     } @else if $point == handheld-large {
+//       @media (min-width: 480px) { @content; }
+//     } @else {
+//       @media (min-width: $point) { @content; }
+//     }
+//   }
+  
+  
+  @mixin setfontsize($size){
+    font-size: $size;
+  }
+  @mixin setHeightAndWidth($height,$width){
+    height: $height;
+    width: $width;
+  }
+  @mixin setPadding($top, $right, $bottom, $left) {
+    padding-left: $left;
+    padding-bottom: $bottom;
+    padding-right: $right;
+    padding-top: $top;
+  }
+  
+  @mixin setMargin($top, $right, $bottom, $left) {
+    margin-left: $left;
+    margin-bottom: $bottom;
+    margin-right: $right;
+    margin-top: $top;
+  }
+  @mixin setFont($font-weight,$font-style,$front-stretch,$letter-spacing,$text-align){
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-stretch: $front-stretch;
+    letter-spacing: $letter-spacing;
+    text-align: $text-align;
+  }
+  
+  @mixin setBorderShape($border-top,$border-bottom,$border-right,$border-left){
+    border-top: $border-top;
+    border-bottom: $border-bottom;
+    border-right: $border-right;
+    border-left: $border-left;
+  }
+  
+  @mixin setFlexWebkit($webkit-flex,$webkit-box,$moz-flex,$moz-box,$ms-flexbox,$flex){
+    display:$webkit-flex;
+    display:$webkit-box;
+    display:$moz-flex;
+    display:$moz-box;
+    display:$ms-flexbox;
+    display:$flex;
+  }
+  
+  @mixin setBtnColor($backgroundColor,$borderColor,$color){
+    background-color: $backgroundColor;
+    border-color: $borderColor;
+    color: $color;
+  }

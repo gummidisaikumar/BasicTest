@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import PersonalDetails from "../CustomPages/PersonalDetails/PersonalDetails";
 import Navigation from "../CustomComponent/Navigation/Navigation";
 import Dashboard from "../CustomPages/Dashboard/Dashboard";
@@ -15,16 +15,15 @@ class App extends React.Component {
     const { props, state } = this;
     return (
       <div className="App">
-        <div>
-          <Navigation {...props} {...state} />
-        </div>
-        
-        <Switch>
-          <Route exact path="/" component={PersonalDetails} {...props} />
-          <Route path="/userList" component={UserInfo} {...props} />
+        <Router>
+          <div>
+            <Navigation {...props} {...state} />
+            <Route exact path="/" component={PersonalDetails} {...props} />
+            <Route path="/userList" component={UserInfo} {...props} />
 
-          <Route path="/dashboard" component={Dashboard} {...props} />
-        </Switch>
+            <Route path="/dashboard" component={Dashboard} {...props} />
+          </div>
+        </Router>
       </div>
     );
   }

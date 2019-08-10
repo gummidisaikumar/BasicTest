@@ -34,23 +34,8 @@ code {
   font-size: 0.75rem;
   color: red;
 }
-.form-control{
-  border: 0.15rem solid #ced4da !important;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-  font-size: 1rem !important;
-}
+
 .has-error .form-control {
   border-color: #a94442;
 }
-.form-control:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #ced4da !important;
-  outline: 0;
-  box-shadow: none !important;
-}
 
-@import './imports/UI/Stylesheet/_paddingAndMargin.css';
-@import './imports/UI/Stylesheet/_radio-button.css';
-@import './imports/UI/CustomComponent/Navigation/Navigation.css';
-@import './imports/UI/CustomPages/PersonalDetails/PersonalDetails.css';

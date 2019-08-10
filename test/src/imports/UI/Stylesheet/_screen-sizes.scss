@@ -1,0 +1,135 @@
+/*
+  TODO:
+  Devices with resolutions and category
+
+  0 px < extrasmall < 349px
+ xx)  iPhone 5    320 x 568
+
+ 350px < phone-width < 409px
+ xx)  Galaxy Note2 360 x 640
+ xx)  Galaxy Note3 360 x 640
+ xx)  Galaxy SIII  360 x 640
+ xx)  Galaxy S5    360 x 640
+ xx)  Nexus 5      360 x 640
+
+ xx)  iPhone 6    375 x 667
+ xx)  iPhone 7    375 x 667
+ xx)  iPhone 8    375 x 667
+ xx)  iPhone X    375 x 812
+
+ 410px < iphone-width <  499px
+ xx)  Nexus 5X       412 x 732
+ xx)  Nexus 6P       412 x 732
+ xx)  iPhone 6 Plus  414 x 736
+ xx)  iPhone 7 Plus  414 x 736
+ xx)  iPhone 8 Plus  414 x 736
+
+ 500px < phablet-width < 649px
+ xx)  Nexus 7        600 x 960
+
+ 650px < tablet-width < 767px;
+
+
+ 768 < desktop-width: 1023px;
+ xx)  iPad           768 x 1024
+ xx)  Nexus 10       800 x 1280
+
+ 1024 < ipadPro-width: 1366px;
+ xx)  iPad Pro    1024 x 1366
+ xx)  Laptop 1     1280 x 950
+ xx)  Laptop 2     1280 x 800
+
+ 1367 < fhd-width < 1920px
+ xx)  Laptop 3     1440 x 900
+
+ 1920 < qhd-width < 3839
+
+ 3840 > 4k-width
+
+*/
+
+$extrasmall: 320px;
+$phone-width: 410px;
+$iphone-width: 500px;
+$phablet-width: 650px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$desktopPro-width: 1200px;
+$ipadPro-width: 1360px;
+$desktop-large-width: 1536px;
+$container-max-width: 1800px;
+$fdh-width: 1920px;
+$hd-width: 2436px;
+$qdh-width: 3839px;
+
+@mixin xsmall {
+  @media (max-width: #{$extrasmall - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (min-width: #{$extrasmall}) and (max-width: #{$phone-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin iphone {
+  @media (min-width: #{$phone-width}) and (max-width: #{$iphone-width - 1px}) {
+    @content;
+  }
+}
+@mixin phablet {
+  @media (min-width: #{$iphone-width}) and (max-width: #{$phablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$phablet-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobileScreen {
+  @media (min-width: #{$extrasmall}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin iPad {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$ipadPro-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin hdRes {
+  @media (min-width: #{$ipadPro-width }) and (max-width:#{$fdh-width - 1px}) {
+    @content;
+  }
+}
+@mixin hdResSmall {
+  @media (min-width:#{$fdh-width})and (max-width:#{$hd-width - 1px}) {
+    @content;
+  }
+}
+@mixin hdResMedium {
+  @media (min-width:#{$hd-width}) and (max-width:#{$qdh-width - 1px}) {
+    @content;
+  }
+}
+@mixin hdResLarge {
+  @media (min-width:#{$qdh-width + 1px}) {
+    @content;
+  }
+}
+@mixin containerMaxWidth {
+  @media (min-width:#{$container-max-width}) {
+    @content;
+  }
+}

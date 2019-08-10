@@ -1,0 +1,123 @@
+/*--------------------------------------------------------------
+	Common
+--------------------------------------------------------------*/
+@import "screen-sizes";
+@import "mixins";
+@import "fonts";
+
+:root {
+  font-size: $fs-16px; // 16px standard size
+
+  // Control the font size across all screens based on
+  // root font size
+  //xsmall is for screen size less than 320px
+  @include xsmall {
+    font-size: $fs-9px;
+  }
+
+  //phone is for screen sizes 320px to 409px
+  @include phone {
+    font-size: $fs-9px;
+  }
+
+  //iphone is from 410px to 499px
+  @include iphone {
+    font-size: $fs-10px;
+  }
+
+  //phablet is from 500px to 649px
+  @include phablet {
+    font-size: $fs-12px;
+  }
+
+  //tablet is from 650px to 767px
+  @include tablet {
+    font-size: $fs-13px;
+  }
+
+  //desktop is from 768px to 1023px
+  @include desktop {
+    font-size: $fs-15px;
+  }
+
+  //ipad is from 1024px to 1365px
+  @include iPad {
+    font-size: $fs-15px;
+  }
+
+  //hdRes is from 1366px to 1919px
+  @include hdRes {
+    font-size: $fs-16px;
+  }
+
+  //hdResSmall is from 1920px to 2435px
+  @include hdResSmall {
+    font-size: $fs-20px;
+  }
+
+  //hdResMedium is from 2436px to 3838px
+  @include hdResMedium {
+    font-size: $fs-28px;
+  }
+
+  //hdResLarge is from 3840px
+  @include hdResLarge {
+    font-size: $fs-36px;
+  }
+}
+
+//no margin and no padding
+.no-margin {
+  @include setMargin(0 !important, 0 !important, 0 !important, 0 !important);
+}
+
+.no-margin--mobile {
+  @include mobileScreen {
+    @include setMargin(0 !important, 0 !important, 0 !important, 0 !important);
+  }
+}
+
+.no-padding {
+  @include setPadding(0 !important, 0 !important, 0 !important, 0 !important);
+}
+.no-padding--mobile {
+  @include mobileScreen {
+    @include setPadding(0 !important, 0 !important, 0 !important, 0 !important);
+  }
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: scrollbar;
+}
+
+.row__no-margin {
+  @include mobileScreen {
+    @include setMargin(null, 0, null, 0);
+  }
+}
+
+.common-flex {
+  @include setFlexWebkit(
+    -webkit-flex,
+    -webkit-box,
+    -moz-flex,
+    -moz-box,
+    -ms-flexbox,
+    flex
+  );
+  align-items: center;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: #fff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

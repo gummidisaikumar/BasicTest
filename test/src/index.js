@@ -1,18 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from "./serviceWorker";
 import App from "./imports/UI/Layout/App";
-
+import './imports/UI/Stylesheet/app.scss';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <App />
-    </Switch>
-  </BrowserRouter>,
+      <App/>,
   document.getElementById("root")
 );
 
