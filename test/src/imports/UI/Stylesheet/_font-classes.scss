@@ -116,7 +116,7 @@
   color: $white;
 }
 .title-butter-scotch {
-  color: $butter-scotch;
+  color: $butter-scotch !important;
 }
 .title-black {
   color: $black;
@@ -191,4 +191,11 @@
   font-family: fontAwesome;
   font-size: $fs-32px;
   color: $light-green;
+}
+
+.fw-800{
+    font-weight: 800;
+}
+.opacity_0.5{
+ opacity: 0.5 !important;
 }

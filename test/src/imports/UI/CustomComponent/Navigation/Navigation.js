@@ -12,6 +12,7 @@ class Navigation extends React.Component {
     this.state = {
       isOpen: false
     };
+    
   }
 
   toggle() {
