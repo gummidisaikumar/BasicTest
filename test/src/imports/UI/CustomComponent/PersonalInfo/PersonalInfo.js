@@ -169,12 +169,12 @@ class PersonalInfo extends Component {
         <Col xs={12} sm={12} md={12} lg={12} xl={12}>
           <Form>
             <Row>
-              <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-                <p className="br-bottom">Personal Info</p>
+              <Col xs={12} sm={12} md={12} lg={12} xl={12} className="pt-4px pb-16px">
+                <p className="page__title br-bottom title-black text-left pb-14px">Personal Info</p>
               </Col>
               <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                 <FormGroup>
-                  <Label className="">First Name</Label>
+                  <Label className="input-label">First Name</Label>
                   <div
                     className={isInputInError(validation.firstName.isInvalid)}
                   >
@@ -183,7 +183,7 @@ class PersonalInfo extends Component {
                       type="text"
                       name="firstName"
                       valid={false}
-                      className="form-control"
+                      className="form-control common__form-control"
                       onChange={this.handleInputChange}
                       value={this.state.firstName}
                     />
@@ -195,7 +195,7 @@ class PersonalInfo extends Component {
               </Col>
               <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                 <FormGroup>
-                  <Label className="">Last Name</Label>
+                  <Label className="input-label">Last Name</Label>
                   <div
                     className={isInputInError(validation.lastName.isInvalid)}
                   >
@@ -204,7 +204,7 @@ class PersonalInfo extends Component {
                       type="text"
                       name="lastName"
                       valid={false}
-                      className="form-control"
+                      className="form-control common__form-control"
                       onChange={this.handleInputChange}
                       value={this.state.lastName}
                     />
@@ -218,7 +218,7 @@ class PersonalInfo extends Component {
             <Row>
               <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                 <FormGroup>
-                  <Label className="">Email Address</Label>
+                  <Label className="input-label">Email Address</Label>
                   <div
                     className={isInputInError(
                       validation.emailAddress.isInvalid
@@ -229,7 +229,7 @@ class PersonalInfo extends Component {
                       type="email"
                       name="emailAddress"
                       valid={false}
-                      className="form-control"
+                      className="form-control common__form-control"
                       onChange={this.handleInputChange}
                       value={this.state.emailAddress}
                     />
@@ -241,7 +241,7 @@ class PersonalInfo extends Component {
               </Col>
               <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                 <FormGroup>
-                  <Label className="">Phone Number</Label>
+                  <Label className="input-label">Phone Number</Label>
                   <div
                     className={isInputInError(validation.phoneNumber.isInvalid)}
                   >
@@ -250,7 +250,7 @@ class PersonalInfo extends Component {
                       type="text"
                       name="phoneNumber"
                       valid={false}
-                      className="form-control"
+                      className="form-control common__form-control"
                       onChange={this.handleInputChange}
                       value={this.state.phoneNumber}
                     />
@@ -262,8 +262,8 @@ class PersonalInfo extends Component {
               </Col>
             </Row>
             <Row>
-              <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-                <p className="br-bottom">Gender</p>
+              <Col xs={12} sm={12} md={12} lg={12} xl={12} className="pb-16px">
+                <p className="page__title br-bottom title-black text-left pt-14px pb-14px">Gender</p>
               </Col>
               <Col xs={12} sm={12} md={6} lg={8} xl={8} className="common-plr">
                 <Row>
@@ -313,14 +313,14 @@ class PersonalInfo extends Component {
               </Col>
             </Row>
             <Row>
-              <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-                <p className="br-bottom">Address Details</p>
+              <Col xs={12} sm={12} md={12} lg={12} xl={12} className="pb-16px">
+                <p className="page__title br-bottom title-black text-left pt-14px pb-14px">Address Details</p>
               </Col>
               <Col xs={12} sm={12} md={6} lg={8} xl={8} className="common-plr">
                 <Row>
                   <Col xs={6} sm={6} md={6} lg={6} xl={6}>
                     <FormGroup>
-                      <Label className="">Address</Label>
+                      <Label className="input-label">Address</Label>
                       <div
                         
                       >
@@ -329,7 +329,7 @@ class PersonalInfo extends Component {
                           type="text"
                           name="address"
                           valid={false}
-                          className="form-control"
+                          className="form-control common__form-control"
                           onChange={this.handleInputChange}
                           value={this.state.address}
                         />
@@ -339,7 +339,7 @@ class PersonalInfo extends Component {
                   </Col>
                   <Col xs={6} sm={6} md={6} lg={6} xl={6}>
                     <FormGroup>
-                      <Label className="">landMark</Label>
+                      <Label className="input-label">landMark</Label>
                       <div
                       >
                         <Input
@@ -347,7 +347,7 @@ class PersonalInfo extends Component {
                           type="text"
                           name="landMark"
                           valid={false}
-                          className="form-control"
+                          className="form-control common__form-control"
                           onChange={this.handleInputChange}
                           value={this.state.landMark}
                         />
@@ -357,7 +357,7 @@ class PersonalInfo extends Component {
                   </Col>
                   <Col xs={6} sm={6} md={6} lg={6} xl={6}>
                     <FormGroup>
-                      <Label className="">Country</Label>
+                      <Label className="input-label">Country</Label>
                       <div
                       >
                         <Input
@@ -365,7 +365,7 @@ class PersonalInfo extends Component {
                           type="text"
                           name="country"
                           valid={false}
-                          className="form-control"
+                          className="form-control common__form-control"
                           onChange={this.handleInputChange}
                           value={this.state.country}
                         />
@@ -374,7 +374,7 @@ class PersonalInfo extends Component {
                   </Col>
                   <Col xs={6} sm={6} md={6} lg={6} xl={6}>
                     <FormGroup>
-                      <Label className="">City</Label>
+                      <Label className="input-label">City</Label>
                       <div
                       >
                         <Input
@@ -382,7 +382,7 @@ class PersonalInfo extends Component {
                           type="text"
                           name="city"
                           valid={false}
-                          className="form-control"
+                          className="form-control common__form-control"
                           onChange={this.handleInputChange}
                           value={this.state.city}
                         />

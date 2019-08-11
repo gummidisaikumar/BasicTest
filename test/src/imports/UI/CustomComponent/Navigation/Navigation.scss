@@ -1,6 +1,14 @@
+@import '../../Stylesheet/colors';
+
 .custom-menu {
-  background: #f3f3f3;
+  background:$light-green;
   min-height: 4rem;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top:0;
+  z-index: 999;
 }
 .custom-menu-item--position {
   width: 87%;
@@ -12,11 +20,16 @@
   color: #000;
 }
 .nav-item--list {
-  font-size: 1rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #25b1a4;
+  font-family: $avenir-medium !important;
+   font-size: $fs-16px !important;
+   color: $white;
 }
 .active.nav-item {
   color: #25b1a4;
+  font-family: $avenir-medium !important;
+   font-size: $fs-16px !important;
+   color: $white;
 }
 .navbar-collapse {
   min-height: 3rem !important;

@@ -13,12 +13,12 @@ class UserInfo extends Component {
 
   render() {
     return (
-      <Row>
-        <Col xs={12} sm={12} md={12} lg={12} xl={10} className="m-auto">
+      <Row className="pt-112px">
+        <Col xs={10} sm={10} md={10} lg={10} xl={10} className="m-auto">
          {this.state.data ? 
-          <Table borderless>
+          <Table>
             <thead>
-              <tr>
+              <tr className="page__title title-black text-left">
                 <th>User Name</th>
                 <th>EmailAddress</th>
                 <th>phoneNumber</th>

@@ -142,7 +142,7 @@ class Register extends Component {
             <Row>
               <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                 <FormGroup>
-                  <Label className="">First Name</Label>
+                  <Label className="input-label">First Name</Label>
                   <div
                     className={isInputInError(validation.firstName.isInvalid)}
                   >
@@ -151,7 +151,7 @@ class Register extends Component {
                       type="text"
                       name="firstName"
                       valid={false}
-                      className="form-control"
+                      className="form-control common__form-control"
                       onChange={this.handleInputChange}
                       value={this.state.firstName}
                     />
@@ -161,7 +161,7 @@ class Register extends Component {
               </Col>
               <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                 <FormGroup>
-                  <Label className="">Last Name</Label>
+                  <Label  className="input-label">Last Name</Label>
                   <div
                     className={isInputInError(validation.lastName.isInvalid)}
                   >
@@ -170,7 +170,7 @@ class Register extends Component {
                       type="text"
                       name="lastName"
                       valid={false}
-                      className="form-control"
+                      className="form-control common__form-control"
                       onChange={this.handleInputChange}
                       value={this.state.lastName}
                     />
@@ -182,7 +182,7 @@ class Register extends Component {
             <Row>
               <Col xs={12} sm={12} md={6} lg={8} xl={8}>
                 <FormGroup>
-                  <Label className="">Email Address</Label>
+                  <Label  className="input-label">Email Address</Label>
                   <div
                     className={isInputInError(
                       validation.emailAddress.isInvalid
@@ -193,7 +193,7 @@ class Register extends Component {
                       type="email"
                       name="emailAddress"
                       valid={false}
-                      className="form-control"
+                      className="form-control common__form-control"
                       onChange={this.handleInputChange}
                       value={this.state.emailAddress}
                     />
@@ -207,7 +207,7 @@ class Register extends Component {
             <Row>
               <Col xs={12} sm={12} md={6} lg={8} xl={8}>
                 <FormGroup>
-                  <Label className="">password</Label>
+                  <Label  className="input-label">password</Label>
                   <div
                     className={isInputInError(validation.password.isInvalid)}
                   >
@@ -216,7 +216,7 @@ class Register extends Component {
                       type="password"
                       name="password"
                       valid={false}
-                      className="form-control"
+                      className="form-control common__form-control"
                       onChange={this.handleInputChange}
                       value={this.state.password}
                     />

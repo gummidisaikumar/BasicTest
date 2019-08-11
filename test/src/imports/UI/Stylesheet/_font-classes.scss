@@ -1,0 +1,194 @@
+@import "fonts";
+@import "colors";
+@import "mixins";
+@import "screen-sizes";
+// To standardize, we can decide before hand like
+
+.no-min-height {
+  min-height: 0 !important;
+}
+//font size override for 12px
+.p-small {
+  font-size: $fs-12px !important;
+  line-height: calc(0.75rem * 1.2) !important;
+}
+
+.p-very-small {
+  font-size: $fs-10px !important;
+  line-height: calc(0.625rem * 1.2) !important;
+}
+
+.p-smallest {
+  font-size: $fs-8px !important;
+  line-height: calc(0.5rem * 1.2) !important;
+}
+
+//font size override for 14px
+.p-medium {
+  font-size: $fs-14px !important;
+  line-height: calc(0.875rem * 1.2) !important;
+}
+//font size overrides
+.p-large {
+  font-size: $fs-18px !important;
+  line-height: calc(1.125rem * 1.2) !important;
+}
+
+.h1-small {
+  font-size: $fs-56px !important;
+  line-height: calc(3.5rem * 1.14) !important;
+}
+.h2-small {
+  font-size: $fs-40px !important;
+  line-height: calc(2.45rem * 1.14) !important;
+}
+.h3-large {
+  font-size: $fs-38px !important;
+  line-height: calc(2.35rem * 1.14) !important;
+}
+
+.h4-medium {
+  font-size: $fs-34px !important;
+  line-height: calc(2.125rem * 1.14) !important;
+}
+
+.h4-small {
+  font-size: $fs-29px !important;
+  line-height: calc(1.8rem * 1.14) !important;
+}
+
+.h5-medium {
+  font-size: $fs-26px !important;
+  line-height: calc(1.6rem * 1.14) !important;
+}
+.h6-medium {
+  font-size: $fs-22px !important;
+  line-height: calc(1.4rem * 1.14) !important;
+}
+
+.input-label {
+  font-family: $avenir-medium !important;
+  font-size: $fs-16px !important;
+  line-height: calc(0.875rem * 1.14);
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+}
+
+// page title is h3 tag
+.page__title {
+  font-family: $openSan-light;
+  color: $white;
+  @include setMargin(0, 0, 0, 0);
+  @include setPadding(0, 0, 0, 0);
+  text-align: center;
+  font-weight: 600;
+}
+
+.page__sub-title {
+  font-family: $openSan-regular;
+  color: $black;
+  @include setMargin(0, 0, 0, 0);
+  @include setPadding(0, 0, 0, 0);
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+// page title is h6 tag
+.page__section__sub-header {
+  font-family: $openSan-regular;
+  color: $black;
+  @include setMargin(0, 0, 0, 0);
+  @include setPadding(0, 0, 0, 0);
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+//title color
+.title-white {
+  color: $white;
+}
+.title-butter-scotch {
+  color: $butter-scotch;
+}
+.title-black {
+  color: $black;
+}
+//background-color
+.bg-white-smoke {
+  background-color: $white-smoke-light;
+}
+.bg-white {
+  background-color: $white;
+}
+
+//border styling
+.border {
+  border: $fs-3px solid $white-smoke-light;
+}
+
+//text-alignment overrides
+.text-left {
+  text-align: left !important;
+}
+
+//font family
+.openSan-bold {
+  font-family: $avenir-medium !important;
+}
+
+.common__form-control {
+  font-family: $avenir-light !important;
+  font-size: $fs-16px !important;
+  color: $black !important;
+  border-radius: $fs-4px !important;
+  border-color: $gain-boro-white !important;
+  height: $fs-40px !important;
+  @include setFont(
+    300 !important,
+    normal !important,
+    normal !important,
+    normal !important,
+    left !important
+  );
+  &:focus {
+    color: $black !important;
+    border-color: $gain-boro-white !important;
+    box-shadow: none !important;
+  }
+  &::placeholder {
+    opacity: 0.6 !important;
+  }
+}
+
+.table {
+  border: $fs-1px solid $gain-boro-white;
+}
+.table thead tr {
+  font-size: $fs-18px !important;
+  background-color: $light-green;
+  color: $white !important;
+}
+.table td,
+.table th {
+  padding: $fs-12px !important;
+  vertical-align: middle !important;
+  border: $fs-1px solid $gain-boro-white;
+  font-family: $avenir-light !important;
+  font-size: $fs-16px !important;
+}
+
+.fa-group:before,
+.fa-users:before {
+  content: "\f0c0";
+  font-family: fontAwesome;
+  font-size: $fs-32px;
+  color: $light-green;
+}

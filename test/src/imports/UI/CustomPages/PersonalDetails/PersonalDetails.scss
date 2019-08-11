@@ -1,18 +1,18 @@
 .personal-tabs-container{
-    border: .05rem solid #20b9ab;
+    border: .05rem solid $light-green;
     border-radius: 0.5rem;
 }
 
 .personal-tabs-bg{
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    background: #20b9ab;
+    background: $light-green;
 }
 .personal-tabs{
-   font-size: 1rem;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   color: #fff;
-   padding: 0.5rem 1rem;
+   font-family: $avenir-medium !important;
+   font-size: $fs-16px !important;
+   color: $white;
+   padding: $fs-12px $fs-16px;
 }
 .opacity-05{
     opacity: 0.5;

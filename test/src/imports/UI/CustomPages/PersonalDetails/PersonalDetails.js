@@ -74,7 +74,7 @@ class PersonalDetails extends Component {
   }
   render() {
     return (
-      <Row className="mt-48px">
+      <Row className="pt-112px">
         <Col
           xs={10}
           sm={10}
