@@ -12,13 +12,13 @@ class PublicNavigation extends React.Component {
   }
 componentWillMount(){
   const {location} = this.props.history;
-  console.log(location);
   this.setState({
     pathName: location.pathname
   });
 
 }
   render() {
+    const{props} = this.props;
     return (
       <Nav className="custom-menu-item--position">
         <NavItem className="" onClick={() => this.props.onToggle()}>
