@@ -11,11 +11,13 @@ class Dashboard extends Component {
   }
 
   render() {
+    const{data} = this.state;
+    debugger;
     return (
       <Row className="pt-112px">
         <Col xs={10} sm={10} md={10} lg={10} xl={10} className="m-auto">
           <Row>
-            {this.state.data.map(data => (
+            {data != null ? data.map(data => (
               <Col xs={6} sm={6} md={4} lg={3} xl={3}>
                 <Row className="mt-8px mb-8px">
                   <Col className="border padding-1rem bg-white-smoke">
@@ -28,7 +30,7 @@ class Dashboard extends Component {
                   </Col>
                 </Row>
               </Col>
-            ))}
+            )): <p  className="page__title mb-0px title-black">User Details are not Found</p>}
           </Row>
         </Col>
       </Row>
