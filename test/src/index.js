@@ -1,14 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {Provider} from 'react-redux';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from "./serviceWorker";
 import App from "./imports/UI/Layout/App";
 import './imports/UI/Stylesheet/app.scss';
+import store from './imports/Redux/store'
+
 
 ReactDOM.render(
-      <App/>,
+  <Provider store={store}>
+      <App/>
+  </Provider>,
   document.getElementById("root")
 );
 
